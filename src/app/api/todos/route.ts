@@ -46,3 +46,11 @@ export async function POST(request: Request) {
     }
 
 }
+
+
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export async function DELETE(request: NextRequest){
+    const deletedItems = await prisma.todo.deleteMany({ where:{ complete:true}});
+    return NextResponse.json( deletedItems, {status: 200});
+}

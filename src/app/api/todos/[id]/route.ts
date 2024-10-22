@@ -49,6 +49,9 @@ export async function PUT(request: NextRequest, { params }: Params) {
 
 
 
+
+
+
 //generics handlers
 const getOneTodo = async( id:string ):Promise<Todo | undefined> =>{
     const  todo = await prisma.todo.findFirstOrThrow({ where: { id: id } });
