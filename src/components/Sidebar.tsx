@@ -19,7 +19,7 @@ const menuItems:{ icon:React.ReactNode, title:string, path:string }[] =[
   },
   {
     icon: <IoListOutline size={30} />,
-    path:'/server-todos',
+    path:'/dashboard/server-todos',
     title:'Server Actions'
   }
 ]
