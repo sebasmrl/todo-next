@@ -17,7 +17,7 @@ export const sleep = ( seconds:number = 0):Promise<void>=>{
 
 
 export const toggleTodo = async (id:string, complete:boolean):Promise<Todo>=>{
-     await sleep(4);
+     //await sleep(4);
     const todo = await prisma.todo.findFirst({ where:{ id}});
     if( !todo ) throw `Todo con id:${id} no encontrado`;
     
