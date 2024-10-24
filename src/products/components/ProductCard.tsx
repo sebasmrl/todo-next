@@ -5,7 +5,7 @@ import Image from "next/image"
 import { IoAddCircleOutline, IoTrashOutline } from "react-icons/io5"
 import { Product } from "../data/products"
 import { Stars } from "./Stars"
-import { addProductToCart, deleteOneProductItemFromCart } from "@/shopping-cart/helpers/client-helpers"
+import { addProductToCart, removeProductFromCart } from "@/shopping-cart/helpers/client-helpers"
 import { getProductsNumberOnCartAction } from "@/shopping-cart/actions/actions";
 import { useRouter } from "next/navigation";
 
@@ -18,10 +18,11 @@ export const ProductCard = ({ id,name, image, price, rating }: Product) => {
   const onAddProductToCart =()=>{
     addProductToCart(id);
     router.refresh();
-    //getProductsNumberOnCartAction();
   }
+  
   const onDeleteProductFromCart =()=>{
-    deleteOneProductItemFromCart(id);
+    //deleteOneProductItemFromCart(id);
+    removeProductFromCart(id);
     getProductsNumberOnCartAction();
   }
 

@@ -5,7 +5,7 @@ export interface ProductOnCart{
     quantity:number;
 }
 
-export const getProductOnCartHelper =(cookieCart:{ [id:string]:number}):ProductOnCart[] =>{
+export const getProductOnCartServerHelper =(cookieCart:{ [id:string]:number}):ProductOnCart[] =>{
 
     const productsOnCart:ProductOnCart[] = [];
     
@@ -18,3 +18,14 @@ export const getProductOnCartHelper =(cookieCart:{ [id:string]:number}):ProductO
     //console.log(productsOnCart)
     return productsOnCart;
 }
+
+
+export const getTotalCountProducts = (cookieCart: { [id: string]: number }):number => {
+    let items = 0;
+    Object.values( cookieCart ).forEach( (value) => {
+      items += value as number;
+    })
+  
+    return items;
+  }
+
