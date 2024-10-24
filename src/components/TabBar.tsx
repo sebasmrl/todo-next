@@ -41,6 +41,7 @@ export const TabBar = ({ currentTab=1, tabOptions=[1,2,3,4]}:Props) => {
                         className="peer hidden"
                     />
                     <label 
+                        // eslint-disable-next-line @typescript-eslint/no-unused-vars
                         onClick={(e:MouseEvent)=> onTabSelected(tab)}
                         className="transition-all block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white">
                         {tab}

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { SidebarItem } from './SidebarItem'
 
 import { CiLogout } from 'react-icons/ci'
-import { IoAccessibilityOutline, IoCalendarOutline, IoCheckboxOutline, IoListOutline } from 'react-icons/io5'
+import { IoAccessibilityOutline, IoCalendarOutline, IoCartOutline, IoCheckboxOutline, IoListOutline } from 'react-icons/io5'
 
 
 const menuItems:{ icon:React.ReactNode, title:string, path:string }[] =[
@@ -31,6 +31,11 @@ const menuItems:{ icon:React.ReactNode, title:string, path:string }[] =[
     icon: <IoAccessibilityOutline size={30} />,
     path:'/dashboard/products',
     title:'Productos'
+  },
+  {
+    icon: <IoCartOutline size={30} />,
+    path:'/dashboard/cart',
+    title:'Carrito de Compras'
   }
 ]
 
